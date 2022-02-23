@@ -1,0 +1,130 @@
+body {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.pacman-cima {
+    display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 240px;
+	height: 122px;
+	background: yellow;
+	border-radius: 120px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+    animation-name: mordida-cima;
+    animation-duration: 0.8s;
+    animation-delay: 0.5;
+    animation-iteration-count: infinite;
+}
+
+.pacman-baixo {
+    display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 240px;
+	height: 122px;
+	background: yellow;
+	border-radius: 120px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+    transform: rotate(180deg);
+    animation-name: mordida-baixo;
+    animation-duration: 0.8s;
+    animation-delay: 0.5;
+    animation-iteration-count: infinite;
+}
+
+.container-food {
+    position: absolute;
+	top: 48%;
+	left: 49%;
+	flex-direction: column;
+    overflow: hidden;
+}
+
+.food-01 {
+    position: absolute;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 30px;
+	height: 30px;
+    margin-left: 400px;
+	background: white;
+	border-radius: 120px;
+    animation-name: food-primeira;
+    animation-duration: 0.8s;
+    animation-delay: 0.5;
+    animation-iteration-count: infinite;
+}
+
+.food-02 {
+    display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 30px;
+	height: 30px;
+    margin-left: 800px;
+	background: white;
+	border-radius: 120px;
+    animation-name: food-segunda;
+    animation-duration: 0.8s;
+    animation-delay: 0.5;
+    animation-iteration-count: infinite;
+}
+
+@keyframes mordida-cima {
+    0% {
+        transform: rotate(0deg);
+        margin-left: 0px;
+    }
+    50% {
+        transform: rotate(-35deg);
+        margin-left: -72px;
+    }
+}
+
+@keyframes mordida-baixo {
+    0% {
+        transform: rotate(180deg);
+        margin-left: 0px;
+    }
+    50% {
+        transform: rotate(200deg);
+        margin-left: -43px;
+    }
+}
+
+@keyframes food-primeira {
+    0% {
+        margin-left: 400px;
+    }
+    100%{
+        margin-left: -50px;
+    }
+}
+
+@keyframes food-segunda {
+    0% {
+        margin-left: 800px;
+    }
+    100%{
+        margin-left: 400px;
+    }
+}

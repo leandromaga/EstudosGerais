@@ -1,0 +1,172 @@
+body {
+	background: #E91D0D;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@font-face {
+	font-family: Robot;
+    src: url('Robot_Font.otf');
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.coracao-meio {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	transform: rotate(45deg);
+	background-color: #FED550;
+}
+
+.coracao-esq {
+	position: relative;
+	bottom: 70px;
+	width: 150px;
+	height: 150px;
+	background-color: #FED550;
+	border-top-right-radius: 100px;
+	border-top-left-radius: 100px;
+
+}
+
+.coracao-dir {
+	position: relative;
+	bottom: 150px;
+	left: -70px;
+	width: 150px;
+	height: 150px;
+	background-color: #FED550;
+	border-top-left-radius: 100px;
+	border-bottom-left-radius: 100px;
+}
+
+.sigla {
+	position: absolute;
+	top: 150px;
+	width: 150px;
+	height: 150px;
+}
+.c-cima {
+	position: absolute;
+	bottom: 99.5px;
+	left: 30px;
+	width: 10px;
+	height: 55px;
+	transform: rotate(90deg);
+	background-color: red;
+}
+
+.c-esq {
+	position: absolute;
+	bottom: 57px;
+	left: 0.4px;
+	width: 10px;
+	height: 75px;
+	background-color: red;
+}
+
+.c-baixo {
+	position: absolute;
+	bottom: 34.3px;
+	left: 30px;
+	width: 10px;
+	height: 55px;
+	transform: rotate(90deg);
+	background-color: red;
+}
+
+.h-esq {
+	position: absolute;
+	bottom: 55px;
+	left: 90px;
+	width: 10px;
+	height: 75px;
+	background-color: red;
+}
+
+.h-meio {
+	position: absolute;
+	bottom: 60px;
+	left: 115px;
+	width: 10px;
+	height: 60px;
+	transform: rotate(90deg);
+	background-color: red;
+}
+.h-dir {
+	position: absolute;
+	bottom: 55px;
+	left: 145px;
+	width: 10px;
+	height: 75px;
+	background-color: red;
+}
+
+.antenas {
+	display: flex;
+	justify-content: space-between;
+	width: 50%;
+}
+
+.antena-esq {
+	border-radius: 100%;
+	border-right: 6px solid black;
+	height: 150px;
+	width: 270px;
+	margin-right: 50px;
+	background: transparent;
+}
+
+.ponta-esq {
+	position: relative;
+	left: -108px;
+	bottom: 10px;
+	width: 45px;
+	height: 20px;
+	background: #FED550;
+	transform: rotate(45deg);
+	background-image: linear-gradient(#FED550 50%, red 50%);
+	border-radius: 100%;
+	animation: girar-ponta-esq 2s infinite;
+}
+
+.antena-dir {
+	border-radius: 100%;
+	border-left: 6px solid black;
+	height: 150px;
+	width: 270px;
+	background: transparent;
+}
+
+.ponta-dir {
+	position: relative;
+	left: 30px;
+	bottom: 10px;
+	width: 20px;
+	height: 20px;
+	background: #FED550;
+	transform: rotate(-45deg);
+	background-image: linear-gradient(#FED550 50%, red 50%);
+	border-radius: 100%;
+	animation: girar-ponta-dir 2s infinite;
+}
+
+@keyframes girar-ponta-esq{
+	to {
+		transform: rotate(405deg);
+	} 
+}
+
+@keyframes girar-ponta-dir {
+	to {
+		transform: rotate(-409deg);
+	} 
+}
